@@ -10,3 +10,9 @@ vim.api.nvim_create_autocmd({ "VimEnter" }, {
 	end,
 })
 vim.cmd(':colorscheme retrobox ')
+
+-- enabled LSP
+vim.lsp.enable('pyright')
+require("plugins.LspConfigs.pyright")
+vim.lsp.enable('clangd')
+require("plugins.LspConfigs.clangd")
