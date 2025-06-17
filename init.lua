@@ -2,10 +2,15 @@ require("core.lazy")
 require("core.mappings")
 
 
+
+
+-- basics
+vim.o.number = true
+
 -- autocommands
 vim.api.nvim_create_autocmd({ "VimEnter" }, {
 	pattern = {":wq"},
-	callback = function()
+	checker = { enabled = false },
 		print("Got u")
 	end,
 })
