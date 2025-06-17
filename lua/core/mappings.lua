@@ -1,8 +1,16 @@
 
-vim.g.mapleader = " " -- easy to reach leader key
+vim.g.mapleader = " " -- easy to reach leader key, sets space as leader
 vim.keymap.set("n", "-", vim.cmd.Ex) -- need nvim 0.8+
 
 local options = { noremap = true, silent = true }
+
+
+-- Telescope mappings
+local telescope = require("telescope.builtin")
+
+local map = vim.keymap.set
+local opts = { noremap = true, silent = true }
+
 
 -- Telescope configurations
 local builtin = require('telescope.builtin')
