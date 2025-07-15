@@ -7,7 +7,13 @@ if not vim.loop.fs_stat(lazypath) then
     lazypath,
   })
 end
+vim.g.mapleader = " "
 vim.opt.rtp:prepend(lazypath)
-
 require("lazy").setup("plugins")
+require("core/mappings")
 
+
+vim.opt.tabstop = 4
+vim.opt.number = true
+vim.opt.shiftwidth = 4
+vim.opt.softtabstop = 4
